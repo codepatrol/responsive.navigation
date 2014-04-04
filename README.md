@@ -3,4 +3,4 @@ responsive.navigation
 
 ## description
 This implements a mobile accordion-navigation without any JavaScript.
-See [example on codepen](http://cdpn.io/ptBsw).
+See <a href="http://cdpn.io/ptBsw" tartget="_blank">example on codepen</a>.
