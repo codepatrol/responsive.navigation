@@ -116,6 +116,10 @@ nav .parent label {
         text-align: right;
     }
 
+    nav .current {
+        line-height: 1;
+    }
+
     nav label {
         display: none;
     }
@@ -182,7 +186,7 @@ nav .parent label {
         border: 1px solid #000;
         padding: 10px 20px;
         position: absolute;
-        top: 30px;
+        top: 29px;
         right: 0;
         z-index: 10;
     }
@@ -216,34 +220,41 @@ nav .parent label {
         white-space: nowrap;
     }
 
-    nav li.parent:hover a {
-        padding-bottom: 13px;
+    nav li.parent:hover a:before,
+    nav li.parent:hover .current:before,
+    nav li.parent:hover a:after,
+    nav li.parent:hover .current:after {
+        border: 10px solid transparent;
+        border-bottom-color: #000;
+        content: '';
+        display: block;
+        margin-left: -10px;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        width: 0;
+    }
+
+    /* adjustment for firefox */
+    @-moz-document url-prefix() {
+
+        nav li.parent:hover a:before,
+        nav li.parent:hover .current:before,
+        nav li.parent:hover a:after,
+        nav li.parent:hover .current:after {
+             bottom: -11px;
+        }
     }
 
     nav li.parent:hover a:after,
     nav li.parent:hover .current:after {
-        background: #fff;
-        border: 1px solid #000;
-        border-width: 1px 0 0 1px;
-        content: '';
-        display: block;
-        height: 10px;
-        margin-left: -5px;
-        position: absolute;
-        bottom: -18px;
-        left: 50%;
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-        width: 10px;
+        border-bottom-color: #fff;
+        border-width: 9px;
+        margin-left: -9px;
     }
 
-    nav li.parent:hover .current:after {
-        bottom: -12px;
-    }
-
+    nav li.parent:hover li a:before,
+    nav li.parent:hover li .current:before,
     nav li.parent:hover li a:after,
     nav li.parent:hover li.current:after {
         display: none;
