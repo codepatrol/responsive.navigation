@@ -76,8 +76,19 @@ nav ul {
     padding: 0;
 }
 
+nav .closeSubMenu {
+    background: transparent;
+    display: none;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+}
+
 nav #showMenu:checked + ul,
-nav .showSubMenu:checked + ul {
+nav .showSubMenu:checked + ul,
+nav .showSubMenu:checked ~ .closeSubMenu {
     display: block;
 }
 
@@ -105,6 +116,10 @@ nav .current {
     text-decoration: underline;
 }
 
+nav .parent {
+    position: relative;
+}
+
 nav .parent label {
     border: 0;
 }
@@ -120,7 +135,9 @@ nav .parent label {
         line-height: 1;
     }
 
-    nav label {
+    nav label,
+    nav .closeSubMenu,
+    nav .showSubMenu:checked ~ .closeSubMenu {
         display: none;
     }
 
