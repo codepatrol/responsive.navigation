@@ -1,5 +1,7 @@
-responsive.navigation - possible to close subMenu
-=================================================
+responsive.navigation
+=====================
+
+### possible to close subMenu
 
 This implements a mobile accordion-navigation without any JavaScript.
 
