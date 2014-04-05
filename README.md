@@ -1,11 +1,11 @@
-responsive.navigation
-=====================
+responsive.navigation - possible to close subMenu
+=================================================
 
 This implements a mobile accordion-navigation without any JavaScript.
 
 ## example
-See <a href="http://cdpn.io/ptBsw" target="_blank">example on codepen</a>. Please note that the codepen-code isn't
+See <a href="http://cdpn.io/Ipwrz" target="_blank">example on codepen</a>. Please note that the codepen-code isn't
 the same as here. Codepen needed some minor changes.
 
 ## browser support
-Above code was successfully tested in modern Chrome, Firefox, Safari and IE9.
+Similar to master, but subMenu can be closed in all Browsers which understand sibling-selector <code>~</code>.
